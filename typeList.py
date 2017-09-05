@@ -8,9 +8,10 @@ def typelist(list):
         mytype = "integer"
     if type(list[0]) == float:
         mytype = "float"
-    for num in range(0,len(list)):
-        if type(list[0]) != type(list[num]):
-            mytype = "mixed"
+    for num1 in range(0,len(list)):
+        for num2 in range (0,len(list)):
+            if type(list[num1]) != type(list[num2]):
+                mytype = "mixed"
     for el in list: 
         if type(el) == str:
             mystring = mystring + " " + el 
@@ -18,7 +19,7 @@ def typelist(list):
             mysum = mysum + el 
         if type(el) == float: 
             mysum = mysum + el 
-
+    print list 
     print "The list you entered is of " + mytype + " type"
     if len(mystring) > 0:
         print "String:" + mystring 
