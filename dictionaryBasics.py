@@ -6,3 +6,10 @@ def intro(dict):
     print "My favorite language is " + str(dict["language"])
 
 intro(me)
+
+def input(arr):
+    dict = {}
+    dict["name"] = arr[0]
+    dict["age"] = arr[1]
+    dict["country"] = arr[2]
+    dict["language"] = arr[3]
